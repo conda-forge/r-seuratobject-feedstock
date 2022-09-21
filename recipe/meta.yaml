@@ -33,7 +33,7 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-matrix >=1.3.3
+    - r-matrix >=1.5.0
     - r-rcpp >=1.0.5
     - r-rcppeigen
     - r-future
@@ -41,11 +41,11 @@ requirements:
     - r-progressr
     - r-rgeos
     - r-rlang >=0.4.7
-    - r-sp
+    - r-sp >=1.5.0
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-matrix >=1.3.3
+    - r-matrix >=1.5.0
     - r-rcpp >=1.0.5
     - r-rcppeigen
     - r-future
@@ -53,7 +53,7 @@ requirements:
     - r-progressr
     - r-rgeos
     - r-rlang >=0.4.7
-    - r-sp
+    - r-sp >=1.5.0
 
 test:
   commands:
