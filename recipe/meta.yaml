@@ -14,17 +14,17 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{ compiler('c') }}              # [not win]
-    - {{ compiler('m2w64_c') }}        # [win]
-    - {{ compiler('cxx') }}            # [not win]
-    - {{ compiler('m2w64_cxx') }}      # [win]
+    - {{ compiler('c') }}          # [not win]
+    - {{ compiler('m2w64_c') }}    # [win]
+    - {{ compiler('cxx') }}        # [not win]
+    - {{ compiler('m2w64_cxx') }}  # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
@@ -33,27 +33,27 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-matrix >=1.3.3
-    - r-rcpp >=1.0.5
-    - r-rcppeigen
     - r-future
     - r-future.apply
+    - r-matrix >=1.5.0
     - r-progressr
+    - r-rcpp >=1.0.5
+    - r-rcppeigen
     - r-rgeos
     - r-rlang >=0.4.7
-    - r-sp
+    - r-sp >=1.5.0
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-matrix >=1.3.3
-    - r-rcpp >=1.0.5
-    - r-rcppeigen
     - r-future
     - r-future.apply
+    - r-matrix >=1.5.0
     - r-progressr
+    - r-rcpp >=1.0.5
+    - r-rcppeigen
     - r-rgeos
     - r-rlang >=0.4.7
-    - r-sp
+    - r-sp >=1.5.0
 
 test:
   commands:
