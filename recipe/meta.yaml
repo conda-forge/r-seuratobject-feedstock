@@ -27,7 +27,6 @@ requirements:
     - r-future.apply             # [build_platform != target_platform]
     - r-progressr                # [build_platform != target_platform]
     - r-future                   # [build_platform != target_platform]
-    - r-rgeos                    # [build_platform != target_platform]
     - r-rcppeigen                # [build_platform != target_platform]
     - r-rlang                    # [build_platform != target_platform]
     - r-matrix                   # [build_platform != target_platform]
@@ -49,7 +48,6 @@ requirements:
     - r-progressr
     - r-rcpp >=1.0.5
     - r-rcppeigen
-    - r-rgeos
     - r-rlang >=0.4.7
     - r-sp >=1.5.0
   run:
@@ -61,7 +59,6 @@ requirements:
     - r-progressr
     - r-rcpp >=1.0.5
     - r-rcppeigen
-    - r-rgeos
     - r-rlang >=0.4.7
     - r-sp >=1.5.0
 
