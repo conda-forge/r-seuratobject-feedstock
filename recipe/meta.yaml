@@ -44,7 +44,7 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-matrix >=1.6.1
+    - r-matrix >=1.6.3
     - r-rcpp >=1.0.5
     - r-rcppeigen
     - r-future
@@ -58,7 +58,7 @@ requirements:
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-matrix >=1.6.1
+    - r-matrix >=1.6.3
     - r-rcpp >=1.0.5
     - r-rcppeigen
     - r-future
