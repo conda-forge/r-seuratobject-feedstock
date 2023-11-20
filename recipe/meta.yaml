@@ -1,4 +1,4 @@
-{% set version = "5.0.0" %}
+{% set version = "5.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/SeuratObject_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/SeuratObject/SeuratObject_{{ version }}.tar.gz
-  sha256: 2dd95f3b2698ca598c582381ef94683977e2a3402eceffff3fea60aed9289972
+  sha256: 5ace1720fef373d44da36d28cab8947cd3c342e76f889c2f204a62d668f5f941
 
 build:
   merge_build_host: true  # [win]
@@ -44,7 +44,7 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-matrix >=1.6.1
+    - r-matrix >=1.6.3
     - r-rcpp >=1.0.5
     - r-rcppeigen
     - r-future
@@ -58,7 +58,7 @@ requirements:
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-matrix >=1.6.1
+    - r-matrix >=1.6.3
     - r-rcpp >=1.0.5
     - r-rcppeigen
     - r-future
