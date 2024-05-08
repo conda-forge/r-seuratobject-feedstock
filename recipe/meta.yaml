@@ -1,4 +1,4 @@
-{% set version = "5.0.1" %}
+{% set version = "5.0.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/SeuratObject_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/SeuratObject/SeuratObject_{{ version }}.tar.gz
-  sha256: 5ace1720fef373d44da36d28cab8947cd3c342e76f889c2f204a62d668f5f941
+  sha256: ded30d21f445b7e353fe4a0c4954d45ad19fbe162615d9addf6732f9318ba0cf
 
 build:
   merge_build_host: true  # [win]
@@ -34,7 +34,9 @@ requirements:
     - r-sp                       # [build_platform != target_platform]
     - r-spam                     # [build_platform != target_platform]
     - {{ compiler('c') }}          # [not win]
+    - {{ stdlib("c") }}            # [not win]
     - {{ compiler('m2w64_c') }}    # [win]
+    - {{ stdlib("m2w64_c") }}      # [win]
     - {{ compiler('cxx') }}        # [not win]
     - {{ compiler('m2w64_cxx') }}  # [win]
     - {{ posix }}filesystem        # [win]
