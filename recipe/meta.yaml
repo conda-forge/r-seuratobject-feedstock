@@ -1,4 +1,4 @@
-{% set version = "5.0.2" %}
+{% set version = "5.1.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/SeuratObject_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/SeuratObject/SeuratObject_{{ version }}.tar.gz
-  sha256: ded30d21f445b7e353fe4a0c4954d45ad19fbe162615d9addf6732f9318ba0cf
+  sha256: ddd4aee40b267af5d1065d98fb523a76f68468fc65ff21f4918f49d2c3a3f02a
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
