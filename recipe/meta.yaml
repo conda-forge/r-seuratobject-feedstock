@@ -33,6 +33,7 @@ requirements:
     - r-rcpp                       # [build_platform != target_platform]
     - r-rcppeigen                  # [build_platform != target_platform]
     - r-rlang                      # [build_platform != target_platform]
+    - r-sp                         # [build_platform != target_platform]
     - r-spam                       # [build_platform != target_platform]
     - {{ compiler('c') }}          # [not win]
     - {{ stdlib("c") }}            # [not win]
@@ -56,6 +57,7 @@ requirements:
     - r-rcpp >=1.0.5
     - r-rcppeigen
     - r-rlang >=0.4.7
+    - r-sp >=1.5.0
     - r-spam
   run:
     - r-base
@@ -67,6 +69,7 @@ requirements:
     - r-progressr
     - r-rcpp >=1.0.5
     - r-rlang >=0.4.7
+    - r-sp >=1.5.0
     - r-spam
 
 test:
